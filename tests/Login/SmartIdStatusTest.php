@@ -1,17 +1,17 @@
 <?php
 namespace Isign\Tests\Login;
 
-use Isign\Login\MobileStatus;
+use Isign\Login\SmartIdStatus;
 use Isign\QueryInterface;
 use Isign\Tests\TestCase;
 
-class MobileStatusTest extends TestCase
+class SmartIdStatusTest extends TestCase
 {
     private $method;
 
     public function setUp()
     {
-        $this->method = new MobileStatus('xxx');
+        $this->method = new SmartIdStatus('xxx');
     }
     
     public function testItExtendsAbstractStatusClass()
@@ -35,7 +35,7 @@ class MobileStatusTest extends TestCase
 
     public function testGetAction()
     {
-        $this->assertSame('mobile/login/status', $this->method->getAction());
+        $this->assertSame('smartid/login/status', $this->method->getAction());
     }
 
     public function testGetMethod()
@@ -45,7 +45,7 @@ class MobileStatusTest extends TestCase
 
     public function testCreateResult()
     {
-        $this->assertInstanceOf('Isign\Login\MobileStatusResult', $this->method->createResult());
+        $this->assertInstanceOf('Isign\Login\SmartIdStatusResult', $this->method->createResult());
     }
 
     public function testHasValidationConstraints()
