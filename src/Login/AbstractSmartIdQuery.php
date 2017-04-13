@@ -20,7 +20,6 @@ abstract class AbstractSmartIdQuery implements QueryInterface
     /**
      * @param string $code
      * @param string $country
-     * @return self
      */
     public function __construct(
         $code,
