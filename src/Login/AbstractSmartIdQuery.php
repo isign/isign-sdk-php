@@ -36,12 +36,10 @@ abstract class AbstractSmartIdQuery implements QueryInterface
      */
     public function getFields()
     {
-        $return = [
+        return [
             'code' => $this->code,
             'country' => $this->country,
         ];
-
-        return $return;
     }
 
     /**
