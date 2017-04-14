@@ -11,7 +11,7 @@ class ResponseMapperTest extends \PHPUnit_Framework_TestCase
     {
         $this->resultMock = $this
             ->getMockBuilder('Isign\ResultInterface')
-            ->setMethods(['getFields', 'setFieldName1', 'setField2'])
+            ->setMethods(['getFields', 'setFieldName1', 'setField2', 'setField1'])
             ->disableOriginalConstructor()
             ->getMock()
         ;
