@@ -3,7 +3,6 @@ namespace Isign\Login;
 
 use Isign\QueryInterface;
 use Isign\Validator\Constraints\Code;
-use Isign\Validator\Constraints\Phone;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**

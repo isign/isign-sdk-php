@@ -1,8 +1,6 @@
 <?php
 namespace Isign\Sign;
 
-use Isign\DocumentTypeProvider;
-use Isign\FileFieldsTrait;
 use Isign\QueryInterface;
 use Isign\Validator\Constraints\Code;
 use Isign\Validator\Constraints\Phone;
