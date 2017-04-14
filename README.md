@@ -7,8 +7,29 @@
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/3481c5eb-eabf-4ed8-872f-84410a4fced7/mini.png)](https://insight.sensiolabs.com/projects/3481c5eb-eabf-4ed8-872f-84410a4fced7)
 
 ## How to start?
+To get started using API you need access key (apiKey). Don't have one? [Request](https://www.isign.io/contacts#request-access) API key. For testing sandbox please use code examples bellow.
+    
+    <?php
+    require __DIR__ . '/vendor/autoload.php';
+    
+    $client = Isign\Client::create([
+        'apiKey' => 'labadiena',
+        'sandbox' => true,
+    ]);
+    
+    $result = $client->get(
+        new Login\Mobile('+37060000007', '51001091072')
+    );
+    
+    echo $result->getStatus();
+    // "ok"
+    echo $result->getCountry();
+    // "LT"
+    echo $result->getCode();
+    // "51001091072"
+    ...
 
-Check integration tests under `tests/Integration` for library use cases.
+Check integration tests under `tests/Integration` for more library use cases.
 
 ## Logging requests
 
@@ -73,7 +94,3 @@ Running single testcase:
 
     phpunit tests/Integration/MobileSignTest.php
 
-
-## TODO
-
-    - Add 'mobile/sign/hash.json' support
