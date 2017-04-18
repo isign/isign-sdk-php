@@ -29,7 +29,7 @@ class MobileResult implements ResultInterface
     /** @var string user's country */
     private $country;
 
-    /** @var array user's login certificate */
+    /** @var string user's login certificate */
     private $certificate;
 
     /**
@@ -195,7 +195,7 @@ class MobileResult implements ResultInterface
 
     /**
      * Sets the value of certificate.
-     * @param array $certificate the certificate
+     * @param string $certificate the certificate
      * @return void
      */
     public function setCertificate($certificate)
