@@ -8,53 +8,8 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Login status for mobile ID.
  */
-class MobileStatus implements TokenizedQueryInterface
+class MobileStatus extends AbstractStatus
 {
-    /** @var string unique resource identifier, received from mobile login request */
-    private $token;
-
-    /**
-     * @param string $token unique resource identifier, received from mobile login request
-     * @return self
-     */
-    public function __construct($token)
-    {
-        $this->token = $token;
-    }
-
-    /**
-     * Get token
-     * @return string
-     */
-    public function getToken()
-    {
-        return $this->token;
-    }
-
-    /**
-     * Get fields
-     * @return array
-     */
-    public function getFields()
-    {
-        return [
-            'token' => $this->token,
-        ];
-    }
-
-    /**
-     * Validation constraints for request data validation
-     * @return Assert\Collection
-     */
-    public function getValidationConstraints()
-    {
-        return new Assert\Collection([
-            'token' => new Assert\Required(
-                [new Assert\NotBlank()]
-            )
-        ]);
-    }
-
     /**
      * Result object for this query result
      * @return MobileStatusResult
@@ -71,14 +26,5 @@ class MobileStatus implements TokenizedQueryInterface
     public function getAction()
     {
         return 'mobile/login/status';
-    }
-
-    /**
-     * HTTP method to use
-     * @return string
-     */
-    public function getMethod()
-    {
-        return QueryInterface::GET;
     }
 }

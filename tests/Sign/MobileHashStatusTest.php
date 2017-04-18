@@ -1,28 +1,28 @@
 <?php
-namespace Isign\Tests\Login;
+namespace Isign\Tests\Sign;
 
-use Isign\Login\MobileStatus;
 use Isign\QueryInterface;
+use Isign\Sign\MobileHashStatus;
 use Isign\Tests\TestCase;
 
-class MobileStatusTest extends TestCase
+class MobileHashStatusTest extends TestCase
 {
     private $method;
 
     public function setUp()
     {
-        $this->method = new MobileStatus('xxx');
-    }
-    
-    public function testItExtendsAbstractStatusClass()
-    {
-        $this->assertInstanceOf('Isign\Login\AbstractStatus', $this->method);
+        $this->method = new MobileHashStatus('xxx');
     }
 
     public function testContainsToken()
     {
         $this->assertInstanceOf('Isign\TokenizedQueryInterface', $this->method);
         $this->assertSame('xxx', $this->method->getToken());
+    }
+    
+    public function testItExtendsAbstractStatusClass()
+    {
+        $this->assertInstanceOf('Isign\Login\AbstractStatus', $this->method);
     }
 
     public function testGetFields()
@@ -35,7 +35,7 @@ class MobileStatusTest extends TestCase
 
     public function testGetAction()
     {
-        $this->assertSame('mobile/login/status', $this->method->getAction());
+        $this->assertSame('mobile/sign/hash/status', $this->method->getAction());
     }
 
     public function testGetMethod()
@@ -45,7 +45,7 @@ class MobileStatusTest extends TestCase
 
     public function testCreateResult()
     {
-        $this->assertInstanceOf('Isign\Login\MobileStatusResult', $this->method->createResult());
+        $this->assertInstanceOf('Isign\Sign\MobileHashStatusResult', $this->method->createResult());
     }
 
     public function testHasValidationConstraints()

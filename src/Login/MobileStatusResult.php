@@ -6,11 +6,8 @@ use Isign\StatusResultInterface;
 /**
  * Result object for mobile ID login status response.
  */
-class MobileStatusResult implements StatusResultInterface
+class MobileStatusResult extends AbstractStatusResult
 {
-    /** @var string response status */
-    private $status;
-
     /**
      * Fields expected in response
      * @return array
@@ -20,24 +17,5 @@ class MobileStatusResult implements StatusResultInterface
         return [
             'status',
         ];
-    }
-
-    /**
-     * Set status
-     * @param string $status
-     * @return void
-     */
-    public function setStatus($status)
-    {
-        $this->status = $status;
-    }
-
-    /**
-     * Get status
-     * @return string
-     */
-    public function getStatus()
-    {
-        return $this->status;
     }
 }

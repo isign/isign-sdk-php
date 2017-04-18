@@ -1,28 +1,27 @@
 <?php
 namespace Isign\Tests\Login;
 
-use Isign\Login\MobileStatusResult;
-use Isign\QueryInterface;
+use Isign\Login\SmartIdCertificateResult;
 use Isign\Tests\TestCase;
 use Isign\Tests\TestResultFieldsTrait;
 
-class MobileStatusResultTest extends TestCase
+class SmartIdCertificateResultTest extends TestCase
 {
     private $method;
     
     public function setUp()
     {
-        $this->method = new MobileStatusResult();
-    }
-    
-    public function testItExtendsAbstractStatusClass()
-    {
-        $this->assertInstanceOf('Isign\Login\AbstractStatusResult', $this->method);
+        $this->method = new SmartIdCertificateResult();
     }
 
     public function testStatusInterface()
     {
         $this->assertInstanceOf('Isign\StatusResultInterface', $this->method);
+    }
+    
+    public function testExtendsStatusResult()
+    {
+        $this->assertInstanceOf('Isign\Login\SmartIdStatusResult', $this->method);
     }
 
     use TestResultFieldsTrait;
@@ -31,6 +30,11 @@ class MobileStatusResultTest extends TestCase
     {
         return [
             ['status'],
+            ['certificate'],
+            ['code'],
+            ['country'],
+            ['name'],
+            ['surname'],  
         ];
     }
 }

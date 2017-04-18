@@ -19,6 +19,11 @@ class MobileStatusTest extends TestCase
         $this->assertInstanceOf('Isign\TokenizedQueryInterface', $this->method);
         $this->assertSame('xxx', $this->method->getToken());
     }
+    
+    public function testItExtendsAbstractStatusClass()
+    {
+        $this->assertInstanceOf('Isign\Login\AbstractStatus', $this->method);
+    }
 
     public function testGetFields()
     {

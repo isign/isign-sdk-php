@@ -58,7 +58,7 @@ class MobileCertificate implements QueryInterface
 
     /**
      * Validation constraints for fields
-     * @return array
+     * @return Assert\Collection
      */
     public function getValidationConstraints()
     {
