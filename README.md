@@ -1,9 +1,9 @@
 # ISIGN.io API PHP Client
 
-[![Build Status](https://travis-ci.org/isign/isign-sdk-php.svg?branch=develop)](https://travis-ci.org/isign/isign-sdk-php)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/isign/isign-sdk-php/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/isign/isign-sdk-php/?branch=develop)
-[![Code Coverage](https://scrutinizer-ci.com/g/isign/isign-sdk-php/badges/coverage.png?b=develop)](https://scrutinizer-ci.com/g/isign/isign-sdk-php/?branch=develop)
-[![Build Status](https://scrutinizer-ci.com/g/isign/isign-sdk-php/badges/build.png?b=develop)](https://scrutinizer-ci.com/g/isign/isign-sdk-php/build-status/master)
+[![Build Status](https://travis-ci.org/isign/isign-sdk-php.svg?branch=master)](https://travis-ci.org/isign/isign-sdk-php)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/isign/isign-sdk-php/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/isign/isign-sdk-php/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/isign/isign-sdk-php/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/isign/isign-sdk-php/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/isign/isign-sdk-php/badges/build.png?b=master)](https://scrutinizer-ci.com/g/isign/isign-sdk-php/build-status/master)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/3481c5eb-eabf-4ed8-872f-84410a4fced7/mini.png)](https://insight.sensiolabs.com/projects/3481c5eb-eabf-4ed8-872f-84410a4fced7)
 
 ## How to start?
