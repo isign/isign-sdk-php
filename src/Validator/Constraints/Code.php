@@ -57,7 +57,7 @@ class Code extends Regex
     private function getCountryPatterns()
     {
         return [
-            'test' => '14212128029',
+            'test' => '11412090004',
             'lt,ee' => '[3456]{1}[0-9]{2}(0[1-9]|1[0-2])\d{6}',
             'fi' => '[0-9]{2}(0[1-9]|1[0-2])[0-9]{2}[\+-A]\d{4}'
         ];

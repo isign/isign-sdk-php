@@ -55,7 +55,7 @@ class CodeValidatorTest extends AbstractConstraintValidatorTest
     {
         return array(
             // Test
-            array('14212128029'),
+            array('11412090004'),
             // Lithuania, Estonia
             array('39009090909'),
             array('39009090909'),
